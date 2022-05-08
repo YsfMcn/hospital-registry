@@ -1,0 +1,28 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Phone</th>
+      <th>National Security Number</th>
+      <th class="text-right">Age</th>
+    </tr>
+    <tr *ngFor="let patient of patients">
+      <td>
+        <a [routerLink]="['/admin/view', patient.id]">{{patient.name}}</a>
+      </td>
+      <td>
+        {{patient.surname}}
+      </td>
+      <td>
+        {{patient.phone}}
+      </td>
+      <td>
+        {{patient.nationalSecurityNumber}}
+      </td>
+      <td class="text-right">
+        {{patient.age}}
+      </td>
+    </tr>
+  </table>
+</div>
